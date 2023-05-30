@@ -1,0 +1,308 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-size: 16px;
+    background-image: url('./myImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+
+section ul {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Fredoka', sans-serif;
+}
+
+section li {
+    list-style: none;
+    font-size: 1.8vw;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.score {
+    font-size: 96px;
+    font-weight: bold;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    height: 90vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+article i {
+    font-size: 20vw
+}
+
+article .fist,
+article .hand {
+    transform: rotate(90deg);
+}
+
+.player .scissors {
+    transform: scaleX(-1);
+}
+
+.opp .fist,
+.opp .hand {
+    transform: rotate(270deg) scaleX(-1);
+}
+
+.options {
+    display: flex;
+    justify-content: space-between;
+}
+
+.options i {
+    font-size: 3vw;
+    background-color: #042D5D;
+    padding: 15px;
+    border-radius: 50%;
+    color: #f6f6f6
+}
+
+.options .scissors {
+    transform: rotate(90deg)
+}
+
+.rules {
+    width: 50vw;
+    height: 35vh;
+    background-color: rgba(246, 244, 244, 0.913);
+    position: absolute;
+    top: 25vh;
+    left: 25vw;
+    display: flex;
+    border-radius: 10px
+}
+
+.rules i {
+    font-size: 3vw;
+}
+
+.rules ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+button {
+    font-size: 3vw;
+    text-transform: uppercase;
+    padding: 2vw;
+    border-radius: 10px;
+    border: none;
+    background-color: #042e5dc6;
+    color: #f6f6f6;
+    font-family: 'Fredoka', sans-serif;
+    backdrop-filter: blur(8px);
+}
+
+.time {
+    position: absolute;
+    font-size: 6vw;
+    top: 15vh;
+    width: 100vw;
+    text-align: center;
+    font-family: 'Fredoka', sans-serif;
+    color: #f6f6f6
+}
+
+.options i,
+#rules i,
+button {
+    cursor: pointer;
+}
+
+.round {
+    text-align: center;
+}
+
+h4 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    font-size: 6vw;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.playWin {
+    text-align: left;
+}
+
+.oppWin {
+    text-align: right;
+}
+
+.player {
+    animation: play 1s linear infinite;
+}
+
+@keyframes play {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(-45deg);
+    }
+
+    75% {
+        transform: rotate(45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.opp {
+    animation: playOpp 1s linear infinite;
+}
+
+@keyframes playOpp {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(45deg);
+    }
+
+    75% {
+        transform: rotate(-45deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.hide {
+    display: none;
+}
+
+@media screen and (max-width: 960px){
+    .time {
+        font-size: 7vh;
+    }
+
+    button {
+        font-size: 6vh;
+    }
+
+    article i {
+        font-size: 30vw;
+    }
+
+    .options i {
+        font-size: 5vw;
+    }
+}
+
+@media screen and (max-width: 640px){
+    main {
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        height: 90vh;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .time{
+        width: 100%;
+        text-align: left;
+        top: 2vh;
+        left: 1vh
+    }
+    #one {
+        width: 100%;
+        display: flex;
+    flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10vh;
+        gap: 5vw;
+    }
+
+    .player i {
+        transform: rotate(360deg);
+
+    }
+
+    .player .scissors {
+        transform: rotate(90deg);
+    }
+
+    .opp .fist,
+    .opp .hand {
+        transform: rotate(180deg) scaleX(-1);
+    }
+
+    .opp .scissors {
+        transform: rotate(270deg);
+    }
+    .options i{ 
+        margin: 1vh
+    }
+    .round{
+        text-align: left;
+        left: 1vh;
+    }
+    .playWin {
+        text-align: center;
+        top: 35vh
+    }
+    
+    .oppWin {
+        text-align: center;
+    }
+}
+@media screen and (max-height: 640px){
+    .time {
+        font-size: 5vh;
+    }
+    .score{
+        font-size: 7vh;
+    }
+    button {
+        font-size: 4vh;
+    }
+
+    article i {
+        font-size: 20vw;
+    }
+    .playWin {
+        text-align: center;
+        top: 95vh
+    }
+    
+    .oppWin {
+        text-align: center;
+        top: 25vh
+    }
+    .options i {
+        font-size: 5vw;
+    }
+
+}

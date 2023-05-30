@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+  </nav>
+  <section class="score">0 - 0</section>
+  <section class="time hide">3</section>
+  <main>
+    <section id="one">
+      <aside class="options">
+        <i class="fa-solid fa-hand-scissors scissors"></i>
+        <i class="fa-solid fa-hand-back-fist fist"></i>
+        <i class="fa-solid fa-hand hand"></i>
+      </aside>
+      <article class="player">
+        <i class="fa-solid fa-hand-back-fist fist"></i>
+      </article>
+    </section>
+      <button>start</button>
+    <section id="two">
+      <article class="opp">
+        <i class="fa-solid fa-hand-back-fist fist"></i>
+      </article>
+    </section>
+    <section class="rules hide" id="rules">
+      <i class="fa-solid fa-xmark" id="cancel"></i>
+      <ul>
+        <li>Rock wins scissors</li>
+        <li>Scissors wins paper</li>
+        <li>Paper wins rock</li>
+        <li>Choose a value in 3 seconds else fallback value will be rock</li>
+        <li>First to reach highest point wins</li>
+      </ul>
+    </section>
+    <h4 class="round hide">Round 1</h4>
+    <h4 class="playWin hide">Winner</h4>
+    <h4 class="oppWin hide">Winner</h4>
+  </main>
+</body>
+<script src="./script.js"></script>
+
+</html>
